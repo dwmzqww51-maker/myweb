@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>呼叫卷毛</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+
+    background: linear-gradient(
+      120deg,
+      #ffd1dc,
+      #ffe4b5,
+      #fff6b0,
+      #d4f7c5,
+      #bde7ff,
+      #e0c3fc,
+      #ffc9de
+    );
+    background-size: 400% 400%;
+    animation: rainbowFlow 10s ease infinite;
+  }
+
+  @keyframes rainbowFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.72);
+    border-radius: 28px;
+    padding: 36px 28px;
+    text-align: center;
+    box-shadow:
+      0 20px 50px rgba(140, 110, 255, 0.25),
+      0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+    backdrop-filter: blur(14px);
+  }
+
+  /* 中间图片样式 */
+  .dog-img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    box-shadow: 0 10px 24px rgba(140, 110, 255, 0.35);
+    animation: gentleFloat 3s ease-in-out infinite;
+  }
+
+  @keyframes gentleFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  .title {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #5b6cff;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    color: #7b87c7;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(120, 130, 200, 0.35);
+    margin: 0 auto 26px;
+  }
+
+  .call-button {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #7fd8ff, #4ab7ff, #2196f3);
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    box-shadow:
+      0 10px 24px rgba(65, 160, 255, 0.45),
+      0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .call-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 14px 30px rgba(65, 160, 255, 0.55),
+      0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  }
+
+  .tip {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #8692b8;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <!-- 这里换成你的图片 -->
+  <img src="https://i.imgs.ovh/2026/09/25/68b51b26361d41f639e2104fa2d03196.jpg" class="dog-img" alt="卷毛">
+
+  <h1 class="title">呼叫卷毛</h1>
+  <p class="subtitle">卷毛正在睡大觉中</p>
+
+  <div class="divider"></div>
+
+  <a class="call-button" href="tel:18573781723">呼 叫 卷 毛</a>
+
+  <p class="tip">系统将打开拨号界面，请手动确认拨打</p>
+</div>
+
+</body>
+</html>
